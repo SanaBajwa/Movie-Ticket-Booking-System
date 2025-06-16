@@ -1,0 +1,210 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Booking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link href="css/animate.css" type='text/css' rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: comic sans;
+        }
+
+        select:required:invalid {
+            color: gray;
+        }
+
+        option[value=""][disabled] {
+            display: none;
+        }
+
+        option {
+            color: black;
+        }
+
+        .locat {
+            height: 40px;
+            width: 100%px;
+            background: #0b243d;
+            color: white;
+            display: block;
+        }
+
+        .locat1 {
+            width: 100%;
+            height: auto;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .locat2 {
+            height: 40px;
+            width: 100%;
+            background: #0b243d;
+            color: white;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: 300px;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        input[type="submit"] {
+            border: 1px;
+            background: #fb2525;
+            outline: none;
+            width: 120px;
+            height: 30px;
+            color: #fff;
+            border-radius: 15px;
+        }
+
+        .title2 {
+            width: 100%;
+            height: 70px;
+            background: black;
+            color: white;
+        }
+
+        .h1 {
+            margin-left: 0px;
+            background: #151719;
+            color: white;
+            height: 50px;
+        }
+
+        .h5 a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .sign {
+            border-radius: 6px;
+            background-color: #1976D2;
+            border: none;
+            color: white;
+            padding: 8px 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            float: right;
+        }
+
+        .sign:hover {
+            background-color: #ECEFF1;
+            color: black;
+        }
+
+        .navbar li a:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .navbar ul {
+            height: 50px;
+            list-style-type: none;
+            overflow: hidden;
+            background-color: #0b243d;
+        }
+
+        .navbar li a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 12px 16px;
+            text-decoration: none;
+            font-size: 22px;
+        }
+    </style>
+</head>
+
+<body class="animated fadeIn">
+
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <!-- Insert movie images here -->
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 5,
+            spaceBetween: 10,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
+
+    <center>
+        <form method="post">
+            <table width="700px" style="margin-top: 20px; margin-bottom: 20px" height="50px">
+                <tr>
+                    <td width="50%">
+                        <select required style="width:100%; height:30px " name="mov">
+                            <option value="" disabled selected>Select Movie</option>
+                            <!-- Insert movie options here -->
+                        </select>
+                    </td>
+                    <td width="50%">
+                        <select required style="width:100%; height:30px " name="loc">
+                            <option value="" disabled selected>Select Location</option>
+                            <!-- Insert location options here -->
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <input type="submit" name="search_show" value="Search" />
+        </form>
+    </center>
+    <br>
+    <hr>
+
+    <!-- Insert dynamic content based on form submission -->
+</body>
+
+</html>

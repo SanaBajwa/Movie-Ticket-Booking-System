@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Receipt Page</title>
+  <link rel="stylesheet" href="css/swiper.min.css">
+
+<link rel="stylesheet" type="text/css" href="css/receiptstyle.css">
+</head>
+<body onload="myFunction()">
+
+
+	
+<div class='navbar'>
+<ul>	
+<li style="margin:0px;padding-left:5px;padding-right:2px;padding-top:0px;float:left;"><a href="userdashboard.php"><img src="images/back.png" height="30px" width="30px"></a> </li>
+<li><img src="images/logo.png" style="padding-left:5px;padding-right:10px;padding-top:10px;float:left;height:35px;width:250px"></li>
+
+
+<li ><a class="active" href="userdashboard.php">Home</a></li>
+<li><a href="#about">About</a></li>
+<li ><a href="#contact">Contact</a></li>
+
+<li style="padding-left:50px;padding-right:20px;padding-top:6px;"><button class='sign' onclick="document.location.href='userlogout.php'">Logout</button></li>
+<li style="padding-left:50px;padding-right:20px;padding-top:6px;"><button class='sign'  onclick="document.location.href='index.php'">Sign In</button></li>
+
+
+</ul>
+</div>
+		
+<div id="loader"></div>	
+		
+<div style="display:none;" id="myDiv" class="animate-bottom" >
+<br><h2 style="color:#886D2C;">Congratulations,Ticket booked!</h2>
+<br><h2 style="color:#886D2C;">We have sent you email regarding your booking.</h2>
+
+
+<div class='food2'>
+<img src='images/food.gif' height='400px' width='1200px' >
+<br><br><br>
+</div>
+	
+		<img src="images/booked.png" class='booked'>
+		
+		<center class="receipt-holder">
+		
+		
+		<table border="1">
+		
+			<tr>
+				<td>
+					<b>DATE</b>
+				</td>
+				<td>
+					<?php echo date("d-m-Y"); ?>
+				</td>
+			</tr>
+			
+			<tr>
+				<td>
+					<b>SHOWTIME</b>
+				</td>
+            </tr>
+			
+			<tr>
+				<td>
+					<b>MOVIE</b>
+				</td>
+            </tr>
+			<tr>
+				<td>
+					<b>THEATRE</b>
+				</td>
+            </tr>
+			
+			<tr>
+				<td>
+					<b>LOCATION</b>
+				</td>
+            </tr>
+			
+			<tr>
+				<td>
+					<b>SEATS</b>
+				</td>
+            </tr>
+		
+		</table>
+		<button class="book" onclick="location.href='booking.php'"> Book Another Ticket?</button>
+		</center>
+	
+</div>
+
+
+<script>
+var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 4000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>	
+
+</body>
+</html>

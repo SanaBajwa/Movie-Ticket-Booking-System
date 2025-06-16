@@ -1,0 +1,206 @@
+
+<html>
+<head>
+	<link href="css/dashstyle.css" type='text/css' rel="stylesheet">
+	<link href="css/animate.css" type='text/css' rel="stylesheet">
+
+
+	<title>Dashboard</title>
+
+	
+</head>
+<body class='bg-gray'>
+
+<div class='header'>
+<center><img src='images/admin.png' alt="AdminLogo" id="adminlogo"><br><center id='head' class="animated flipInX">ADMIN DASHBOARD</center>
+
+</center>
+
+</div>
+
+<div class='navbar'>
+
+<ul align="center">
+<li><a href="dash.html"  >HOME</a></li>
+<li><a href="users.html" >USERS</a></li>
+<li><a href="movie.html" class="active">MOVIES</a></li>
+<li><a href="theatres.html" >THEATRES</a></li>
+<li><a href="timings.html" >TIMINGS</a></li>
+<li><b class='logout' style="padding-top:14px;padding-right:2px;"></b></li>
+<li><a href="logout.html" class='logout'>LOGOUT</a></li>
+</ul>
+
+</div>
+
+
+
+<div class='content'>
+			<br><div align="center"> <b>DETAILS UPDATED.</b></div><br>
+		
+<div id='insert' class='pop animated rotateInDownRight'>
+<div class="pop-content" style="padding:32px">
+  <h1 align='center'>CREATE</h1><br>
+
+  <span class="close" onclick="document.getElementById('insert').style.display='none'">&times;</span>
+  
+	<form action="movie.html" method="post" enctype="multipart/form-data">
+	<table align='center' >
+
+		
+			<tr>
+			<td><font color="red"></font></td>
+			</tr>
+			<tr>
+			<td><b>MOVIE-</b></td>
+			<td><input type="text" name="movie_name"  required></td>
+			</tr>
+			<tr>
+			<td><b>ACTOR-</b></td>
+			<td><input type="text" name="actor"  required></td>
+			</tr>
+			<tr>
+			<td><b>ACTRESS-</b></td>
+			<td><input type="text" name="actress"  required></td>
+			</tr>
+			<tr>
+			<td><b>DIRECTOR-</b></td>
+			<td><input type="text" name="director"  required></td>
+			</tr>
+			<tr>
+			<td><b>RELEASE DATE-</b></td>
+			<td><input type="date" name="rdate"  required></td>
+			</tr>
+			<tr>
+			<td><b>RUNTIME-</b></td>
+			<td><input type="text" name="runtime" placeholder='2hr 35mins' required></td>
+			</tr>
+			<tr>
+			<td><b>GENRE-</b></td>
+			<td><input type="text" name="type"  required></td>
+			</tr>
+			<tr>
+			<td><b>DESCRIPTION-</b></td>
+			<td><textarea name='info' placeholder="Write Something.." rows="4" cols="50" required ></textarea></td>
+			</tr>
+			<tr>
+			<td><b>TRAILER LINK-</b></td>
+			<td><input type="text" name="trailer"></td>
+			</tr>
+			<tr>
+			<td><b>WIKI LINK-</b></td>
+			<td><input type="text" name="wiki"></td>
+			</tr>
+			<tr>
+			<td><b>POSTER-</b></td>
+			<td><input type="file" name="poster[]"></td>
+			</tr> 
+			<tr>
+			<td><b>ACTOR IMAGE-</b></td>
+			<td><input type="file" name="poster[]"></td>
+			</tr>
+			<tr>
+			<td><b>ACTRESS IMAGE-</b></td>
+			<td><input type="file" name="poster[]"></td>
+			</tr>
+			<tr>
+			<td><b>DIRECTOR IMAGE-</b></td>
+			<td><input type="file" name="poster[]"></td>
+			</tr>
+			<tr><td><input type="submit" style="margin-left:90%" name="submit" value="SAVE"></td></tr>
+	</table>
+	</form>
+</div>
+</div>
+					<br><div align="center"> <b>NEW RECORD CREATED SUCCESSFULLY.</b></div><br>
+		
+					
+					<br><div align="center"> <b>ERROR IN INSERTION.</b><br><br></div><br>
+					
+						<br><div align="center"> <b>NEW RECORD CREATED SUCCESSFULLY.</b></div><br>
+						<div align="center"> <b>UPLOAD FAILED(jpg,jpeg,png,gif EXTENSIONS ONLY)</b></div><br>
+						
+						<div align="center"> <b>ERROR IN INSERTION.</b><br><br></div>
+	 
+
+
+	<br><div align="center"> <b>DELETED.</b></div><br>
+	<br><center><b>SHOWING 0 RESULTS.<b></center>
+<center><button class='create animated fadeInUp' onclick="document.getElementById('insert').style.display='block'"> INSERT </button></center><?php
+<br><center><b>SHOWING RESULTS.<b></center><br>
+	
+
+<table align='center' class="animated fadeInUp"  border='1'>
+<tr><center><button class='create animated fadeInUp' onclick="document.getElementById('insert').style.display='block'"> INSERT </button></center></tr>
+
+<tr>
+<th>Sr.No</th>
+<th>MOVIE</th>
+<th>ACTOR</th>
+<th>ACTRESS</th>
+<th>RELEASE DATE</th>
+<th>DIRECTOR</th>
+<th>RUNTIME</th>
+<th>GENRE</th>
+<th>POSTER</th>
+<th>DELETE</th>
+<th>EDIT</th>
+
+
+</tr>
+
+	<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td> </td>
+	<td></td>
+	<td></td>
+	<td> </td>
+	<td></td>
+	
+	
+	<td><img class="myImg" style="cursor: pointer;" onclick="imgdisp(this.src)" alt="No Image" src="Image" height="50px" width='50px' ></td>
+
+	<td><center><a href="movie.html" style="color:white"><img style="height:20px;width:20px" src="images/delete.png">
+	</a></center></td>
+	
+	<td><a href="edit.html" style="color:white"><img style="height:20px;width:20px" src="images/edit.png">
+	</a></td>
+
+	</tr>
+
+
+
+
+</div>
+
+<div id="myModal" class="modal animated zoomIn">
+  <span class="close" style="color:white;top:20px;right: 35px;" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+  <img class="modal-content" id="img01">
+
+</div >
+
+
+<script>
+var modal = document.getElementById('myModal');
+var modalImg = document.getElementById("img01");
+
+function imgdisp(img){
+    modal.style.display = "block";
+    modalImg.src = img;  
+}
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

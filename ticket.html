@@ -1,0 +1,443 @@
+<html>
+
+<head>
+    <title>Seat Selection</title>
+   
+    <script>
+	
+        addEventListener("load", function () {setTimeout(hideURLbar, 0); }, false);
+
+        function hideURLbar() 
+		{
+            window.scrollTo(0, 1);
+        }
+		
+    </script>
+	
+   	<link href="css/animate.css" type='text/css' rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+   
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+ 
+</head>
+
+<body onload="onLoaderFunc()">
+
+	<div class="header">
+		<table  width="100%" >
+			<tr>
+				<td>
+					<h5 style="padding-top: 15px"><center><a href="booking.php"><img src="images/back.png" height="25px" width="25px"></a></center></h5>
+				</td>
+				<td width="15%" >
+					<center>
+					<h4>
+                     Movie:             
+                     </h4>
+                 </center><br>
+
+                </td>
+                <td width="15%" >  
+                      <center>  <h6>
+                        Theatre: 
+                        </h6>
+                    </center>
+
+				</td>
+				
+				<td width="15%" >  
+                      <center>  <h6>
+                        Location: 
+                        </h6>
+                    </center>
+
+				</td>
+				
+                <td width="15%" >
+                 <center>   <h4>
+                    Time: 
+                    </h4></center>
+                </td>
+                <td width="20%" >
+                  <center>  <h6>Silver Price:
+                        
+                     </h6> </center>
+                 </td>
+                 <td width="20%" >
+                    <center> <h6>Gold Price:
+                         </center>
+                </h6> 
+                </td>
+			</tr>
+
+		</table>
+
+		
+	</div>
+
+
+
+    <div class="container">
+
+        <div class="w3ls-reg">
+            <!-- input fields -->
+            <div class="inputForm">
+                <div class="mr_agilemain">
+                    <div class="agileits-right">
+                        <label> Number of Seats
+                            <span>*</span>
+                        </label>
+                        <input type="number" id="Numseats"  required min="1">
+                    </div>
+                </div>
+                <button onclick="takeData()">Start Selecting</button>
+            </div>
+            <!-- //input fields -->
+            <!-- seat availabilty list -->
+            <ul class="seat_w3ls">
+                <li class="smallBox greenBox">Booked Seat</li>
+
+    
+
+                <li class="smallBox emptyBox">Empty Seat</li>
+            </ul>
+            <!-- seat availabilty list -->
+            <!-- seat layout -->
+            <div class="seatStructure txt-center" style="overflow-x:auto;">
+			<form method="Post" >
+                <table id="seatsBlock">
+                    <p id="notification" style="margin-bottom: 10px"></p>
+					
+                    <tr>
+                        <td></td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td></td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                    </tr>
+		
+					<tr><td style="color:#886D2C" >GOLD</td></tr>
+					
+                    <tr>
+                        <td>A</td>
+                        <td>
+                            <input type="checkbox" class="seats" name="a[]" value="A1">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" name="a[]"  value="A2">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" name="a[]"  value="A3">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" name="a[]"  value="A4">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" name="a[]"  value="A5">
+                        </td>
+                        <td class="seatGap"></td>
+                        <td>
+                            <input type="checkbox" class="seats" name="a[]"  value="A6">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" name="a[]"  value="A7">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" name="a[]"  value="A8">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" name="a[]"  value="A9">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" name="a[]"  value="A10">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" name="a[]"  value="A11">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" name="a[]"  value="A12">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>B</td>
+                        <td>
+                            <input type="checkbox" class="seats" name="a[]"  value="B1">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" name="a[]"  value="B2">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" name="a[]"  value="B3">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" name="a[]"  value="B4">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" name="a[]"  value="B5">
+                        </td>
+                        <td></td>
+                        <td>
+                            <input type="checkbox" class="seats" name="a[]"  value="B6">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" name="a[]"  value="B7">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" name="a[]"  value="B8">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" name="a[]"  value="B9">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" name="a[]"  value="B10">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" name="a[]"  value="B11">
+                        </td>
+                        <td>
+                            <input type="checkbox" class="seats" name="a[]"  value="B12">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>C</td>
+                        <td>
+                            <input type="checkbox" class="seats" name="a[]"  value="C1"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="C2"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="C3"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="C4"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="C5"></td>
+                        <td></td>
+                        <td><input type="checkbox" class="seats" name="a[]" value="C6"></td>
+                        <td><input type="checkbox" class="seats" name="a[]" value="C7"></td>
+                        <td><input type="checkbox" class="seats" name="a[]" value="C8"></td>
+                        <td><input type="checkbox" class="seats" name="a[]" value="C9"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="C10"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="C11"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="C12"></td>
+                    </tr>
+
+                    <tr>
+                        <td>D</td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="D1"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="D2"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="D3"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="D4"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="D5"></td>
+                        <td></td>
+                        <td><input type="checkbox" class="seats" name="a[]" value="D6"></td>
+                        <td><input type="checkbox" class="seats" name="a[]" value="D7"></td>
+                        <td><input type="checkbox" class="seats" name="a[]" value="D8"></td>
+                        <td><input type="checkbox" class="seats" name="a[]" value="D9"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="D10"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="D11"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="D12"></td>
+                    </tr>
+
+                    <tr>
+                        <td>E</td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="E1"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="E2"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="E3"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="E4"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="E5"></td>
+                        <td></td>
+                        <td><input type="checkbox" class="seats" name="a[]" value="E6"></td>
+                        <td><input type="checkbox" class="seats" name="a[]" value="E7"></td>
+                        <td><input type="checkbox" class="seats" name="a[]" value="E8"></td>
+                        <td><input type="checkbox" class="seats" name="a[]" value="E9"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="E10"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="E11"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="E12"></td>
+                    </tr>
+
+                    <tr class="seatVGap"></tr>
+					<tr><td style="color:#886D2C">SILVER</td></tr>
+
+                    <tr>
+                        <td>F</td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="F1"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="F2"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="F3"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="F4"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="F5">
+                        </td>
+                        <td></td>
+                        <td><input type="checkbox" class="seats" name="a[]" value="F6"></td>
+                        <td><input type="checkbox" class="seats" name="a[]" value="F7"></td>
+                        <td><input type="checkbox" class="seats" name="a[]" value="F8"></td>
+                        <td><input type="checkbox" class="seats" name="a[]" value="F9"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="F10"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="F11"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="F12"></td>
+                    </tr>
+
+                    <tr>
+                        <td>G</td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="G1"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="G2"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="G3"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="G4"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="G5"></td>
+                        <td></td>
+                        <td><input type="checkbox" class="seats" name="a[]" value="G6"></td>
+                        <td><input type="checkbox" class="seats" name="a[]" value="G7"></td>
+                        <td><input type="checkbox" class="seats" name="a[]" value="G8"></td>
+                        <td><input type="checkbox" class="seats" name="a[]" value="G9"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="G10"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="G11"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="G12"></td>
+                    </tr>
+
+                    <tr>
+                        <td>H</td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="H1"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="H2"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="H3"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="H4"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="H5"></td>
+                        <td></td>
+                        <td><input type="checkbox" class="seats" name="a[]" value="H6"></td>
+                        <td><input type="checkbox" class="seats" name="a[]" value="H7"></td>
+                        <td><input type="checkbox" class="seats" name="a[]" value="H8"></td>
+                        <td><input type="checkbox" class="seats" name="a[]" value="H9"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="H10"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="H11"></td>
+                        <td><input type="checkbox" class="seats" name="a[]"  value="H12"></td>
+                    </tr>
+
+                    
+                </table>
+
+                <div class="screen">
+                    <h2 class="wthree">Screen this way</h2>
+                </div>
+				
+				
+				<input type="submit" class='seat_submit' name='submit_seat' value="Confirm Selection" >
+				</form>
+            </div>            
+        </div>
+	</div>
+<!-- //details after booking displayed here -->		
+  
+	
+		
+            <!-- details after booking displayed here -->
+			<div id="display" class="pop-content pop">
+			<span class="close" onclick="document.getElementById('display').style.display='none'">&times;</span>
+            <div class="displayerBoxes txt-center" style="overflow-x:auto;">
+				<form>
+                <table class="Displaytable w3ls-table" width="100%">
+                    <tr>
+                        
+                        <th>Number of Seats</th>
+                        <th>Seats</th>
+                        <th>Amount</th>
+                    </tr>
+                    <tr>
+                        
+                        <td>
+                            <textarea></textarea>
+                        </td>
+                        <td>
+                            <textarea></textarea>
+                        </td>
+						
+                        <td>
+                            <textarea>
+							</textarea>
+                        </td>
+						
+                    </tr>
+					
+                </table>
+				
+				<center><a class='pay' href="receipt.php">Pay </a> </center> 
+				</form>
+				
+            </div>
+			</div>
+			
+    
+    <!-- js -->
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <!-- //js -->
+    <!-- script for seat selection -->
+    <script>
+	
+
+        function onLoaderFunc() {
+            $(".seat_submit*").prop("disabled", true);
+			$('input[type=checkbox]').not(':checked').prop("disabled", true);
+
+       
+        }
+
+        function takeData() {
+            if ($("#Numseats").val().length == 0) {
+                alert("Please Enter Number of Seats");
+				}
+			
+			if ($("#Numseats").val() > <?php echo $_SESSION['seats'] ?>) {
+                alert("Seats are not available.");
+				}
+			else
+				{
+				$('input[type=checkbox]').not(':checked').prop("disabled", false);
+	
+                $(".inputForm *").prop("disabled", false);
+				$(".seat_submit*").prop("disabled", true);
+
+                document.getElementById("notification").innerHTML =
+                    "<b style='padding:10px 10px 10px 10px;background:white;color:red; '>Please select Seats NOW!</b>";
+					
+					
+				
+
+					
+				}
+		}
+		
+		$('input[type=checkbox]').not(':checked').click(function () {
+			
+			if (($('input:checkbox:checked').length-<?php echo count($seats_booked);?>) == ($("#Numseats").val())) 
+			{
+                $('input[type=checkbox]').not(':checked').prop("disabled", true);
+
+				$(".seat_submit*").prop("disabled", false);
+
+            } else {
+                $('input[type=checkbox]').not(':checked').prop("disabled", false);
+				$(".seat_submit*").prop("disabled", true);
+				}	
+		
+		
+		 });
+				
+			
+		
+		
+        
+
+ 
+    </script>
+
+</body>
+
+</html>
+
+
+
+

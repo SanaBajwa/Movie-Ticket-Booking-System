@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="css/dashstyle.css" type='text/css' rel="stylesheet">
+    <link href="css/animate.css" type='text/css' rel="stylesheet">
+    <title>Dashboard</title>
+</head>
+
+<body class='bg-gray animated fadeIn'>
+
+    <div class='header'>
+        <center><img src='images/admin.png' alt="AdminLogo" id="adminlogo"><br><center id='head'
+                class="animated flipInX">ADMIN DASHBOARD</center></center>
+    </div>
+
+    <div class='navbar'>
+        <ul align="center">
+            <li><a href="dash.php">HOME</a></li>
+            <li><a href="users.php">USERS</a></li>
+            <li><a href="movie.php">MOVIES</a></li>
+            <li><a href="theatres.php" class="active">THEATRES</a></li>
+            <li><a href="timings.php">TIMINGS</a></li>
+            <li><b class='logout' style="padding-top:14px;padding-right:2px;">USER:<!-- Insert user data here --></b></li>
+            <li><a href="logout.php" class='logout'>LOGOUT</a></li>
+        </ul>
+    </div>
+
+    <div class='content'>
+
+        <div id='insert' class='pop animated jackInTheBox'>
+            <div class="pop-content" style="padding:32px">
+                <h1 align='center'>CREATE</h1><br>
+                <span class="close" onclick="document.getElementById('insert').style.display='none'">&times;</span>
+
+                <form action="theatres.php" method="post">
+                    <table align='center'>
+                        <tr>
+                            <td><b>THEATRE-</b></td>
+                            <td><input type="text" name="theatre" required></td>
+                        </tr>
+                        <tr>
+                            <td><b>MOVIE-</b></td>
+                            <td><input type="text" name="movie_name" required></td>
+                        </tr>
+                        <tr>
+                            <tr>
+                                <td><b>LOCATION-</b></td>
+                                <td><input type="text" name="location" required></td>
+                            </tr>
+                            <tr>
+                                <td><b>TIME 1-</b></td>
+                                <td><input type="time" name="time1"></td>
+                            </tr>
+                            <tr>
+                                <td><b>TIME 2-</b></td>
+                                <td><input type="time" name="time2"></td>
+                            </tr>
+                            <tr>
+                                <td><b>TIME 3-</b></td>
+                                <td><input type="time" name="time3"></td>
+                            </tr>
+                            <tr>
+                                <td><b>TIME 4-</b></td>
+                                <td><input type="time" name="time4"></td>
+                            </tr>
+                            <tr>
+                                <td><b>TIME 5-</b></td>
+                                <td><input type="time" name="time5"></td>
+                            </tr>
+
+                            <tr>
+                                <td><input type="submit" style="margin-left:90%" name="submit" value="SAVE"></td>
+                            </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+
+        <div align="center">DETAILS UPDATED.</div>
+
+        <table align='center' class="animated fadeIn" border='1'>
+            <tr>
+                <center><button class='create animated fadeIn'
+                        onclick="document.getElementById('insert').style.display='block'"> INSERT </button></center>
+            </tr>
+            <tr>
+                <th>Sr.No</th>
+                <th>THEATRE</th>
+                <th>MOVIE</th>
+                <th>LOCATION</th>
+                <th>TIME 1</th>
+                <th>TIME 2</th>
+                <th>TIME 3</th>
+                <th>TIME 4</th>
+                <th>TIME 5</th>
+                <th>DELETE</th>
+                <th>EDIT</th>
+            </tr>
+            <!-- Insert data rows here -->
+        </table>
+    </div>
+</body>
+
+</html>
